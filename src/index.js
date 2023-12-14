@@ -17,6 +17,7 @@ $container.addEventListener('mouseout', () => {
 });
 
 $container.addEventListener('touchmove', (e) => {
+  e.preventDefault();
   const touch = e.touches[0];
   const x = touch.clientX - $container.getBoundingClientRect().left;
   const y = touch.clientY - $container.getBoundingClientRect().top;
